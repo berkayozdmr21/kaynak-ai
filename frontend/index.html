@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="tr">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Kaynak AI · Belgeden bilgiye</title><link rel="stylesheet" href="/style.css"><script src="/app.js" defer></script></head>
+<body>
+<aside>
+  <a class="brand" href="/" aria-label="Kaynak AI ana sayfa"><span class="logo">k.</span> kaynak<span class="ai">AI</span></a>
+  <div class="workspace">KİŞİSEL ÇALIŞMA ALANI</div>
+  <div class="nav active">◈ &nbsp; Araştırma masası</div>
+  <div class="section-label">BELGE KÜTÜPHANESİ <span id="count">0</span></div>
+  <label class="upload" id="dropzone"><span class="upload-icon">＋</span><strong>PDF ekle</strong><small>Sürükle veya dosya seç · 10 MB</small><input id="file" type="file" accept="application/pdf,.pdf" hidden></label>
+  <p class="hint">İşaretli belgeler içinde arama yapılır.</p>
+  <div id="documents" class="documents"></div>
+  <button class="demo" id="demo">↗ Örnek belgelerle dene</button>
+  <div class="aside-footer"><span class="dot"></span> Yerel belge kütüphanesi<br><small>Metinler bu sunucuda saklanır.</small></div>
+</aside>
+<main>
+  <header><span>Araştırma masası <span class="slash">/</span> Yeni araştırma</span><span class="status" id="status">Bağlanıyor…</span></header>
+  <div class="content">
+    <div class="eyebrow">OKU. SOR. KAYNAĞINA GİT.</div>
+    <h1>Bilgi çok.<br><span>Kaynağı belli olsun.</span></h1>
+    <p class="intro">Belgelerine sorular sor, yanıtın dayandığı metni gör.<br>Her araştırma, kontrol edilebilir bir kaynakla başlasın.</p>
+    <div class="feature-row"><span>↗ Sayfa bazlı kaynaklar</span><span>◈ Çoklu belge arama</span><span>◎ Türkçe & İngilizce</span></div>
+    <section class="composer" aria-label="Araştırma sorusu">
+      <label for="question" class="sr-only">Sorunuz</label><textarea id="question" placeholder="Belgeler hakkında ne öğrenmek istiyorsun?" maxlength="2000" rows="3"></textarea>
+      <div class="composer-bottom"><span id="selection">Önce bir belge ekle</span><button id="ask">Araştır <span>↗</span></button></div>
+    </section>
+    <div class="suggestions"><button data-q="RAG nedir, nasıl çalışır?">RAG nasıl çalışır? ↗</button><button data-q="TF-IDF yönteminin sınırlamaları nelerdir?">Yöntemin sınırları ↗</button><button data-q="Recall ve MRR nasıl ölçülür?">Başarı nasıl ölçülür? ↗</button></div>
+    <div id="notice" role="status" aria-live="polite"></div>
+    <section id="result" hidden>
+      <div class="result-head"><h2>Araştırma sonucu</h2><span id="result-meta"></span></div>
+      <div id="answer"></div>
+      <div class="source-heading">YANITIN KAYNAKLARI <span id="source-count"></span></div>
+      <div id="sources"></div>
+    </section>
+    <footer>Kaynak AI <span>·</span> Araştırmanı hızlandır. Kaynağını kendin doğrula.<a href="/docs" target="_blank" rel="noopener">API belgeleri ↗</a></footer>
+  </div>
+</main>
+</body></html>
